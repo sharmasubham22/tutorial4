@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# Tutorial 3
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+* Date Created: 02 17 2023
+* Last Modification Date: 02 17 2023
+* Netlify URL: https://tutorial3-csci5709.netlify.app/
+* Git URL: https://git.cs.dal.ca/subham/csci-5709/-/tree/tutorial3
 
-## Available Scripts
+## Authors
 
-In the project directory, you can run:
+* Subham Sharma - subham@dal.ca
 
-### `npm start`
+## Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Visual Studio code Installation : 'https://code.visualstudio.com/download'
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installing
 
-### `npm test`
+- By creating a local folder, clone the project into the folder.
+- Open the project in VS Code.
+- run npm commands like "npm i react-router-dom" to install npm modules.
+- to start the application, run command "npm start"
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+Compiled successfully!
+You can now view webproj in the browser.
+Local:            http://localhost:3000
+On Your Network:  http://your-ip:3000
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+webpack compiled successfully
+```
+## Deployment
 
-### `npm run build`
+* Pushed code on a Github repository.
+* Connected github repository with Netlify account.
+* Project is built on Netlify.
+* App Successfully Deployed.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Built With
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* React - The web framework used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Sources Used
+### register.js
+```
+    const handleInput = (e) => {
+        console.log(e.target.value);
+        if(e.target.value) {
+            ALPHABET_REGEX.test(e.target.value) ? setErrorMessage(NO_ERROR) : setErrorMessage(ALPHABET_ONLY);
+        }
+        else {
+            setErrorMessage(EMPTY_FIELD);
+        }
+        props.setUsername(e.target.value);
+    }
+```
+The code above was created by adapting the code by [Gurleen Kaur Saluja](https://git.cs.dal.ca/gsaluja/tutorial3demo/-/tree/t3v2/src/Components) as shown below: 
+```
+const validations = (e) => {
+    // console.log(e.target.value);
+    if (e.target.name === "firstname") {
+      if (e.target.value) {
+        ALPHABET_REGEX.test(e.target.value)
+          ? setFErr(NO_ERROR)
+          : setFErr(ALPHABET_ONLY);
+      } else {
+        setFErr(EMPTY_FIELD);
+      }
+      setFName(e.target.value);
+    } 
+}
+```
+- <!---How---> The code in [Gurleen Kaur Saluja](https://git.cs.dal.ca/gsaluja/tutorial3demo/-/tree/t3v2/src/Components) was implemented by Gurleen kaur saluja for form validations.
+- <!---Why---> [Gurleen Kaur Saluja](https://git.cs.dal.ca/gsaluja/tutorial3demo/-/tree/t3v2/src/Components)'s Code was used for understanding the form validation process.
+- <!---How---> [Gurleen Kaur Saluja](https://git.cs.dal.ca/gsaluja/tutorial3demo/-/tree/t3v2/src/Components)'s Code was modified by adding own form elements and regexes. 
 
-### `npm run eject`
+## Acknowledements
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* References
+- https://git.cs.dal.ca/gsaluja/tutorial3demo/-/tree/t3v2/src/Components 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
