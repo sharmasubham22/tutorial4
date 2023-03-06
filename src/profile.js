@@ -6,9 +6,10 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Container, Grid } from "@mui/material";
-import { useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 function Profile() {
+  let navigate = useNavigate();
   let incomingData = useLocation();
    const [user, setUser] = useState([]);
   const id = incomingData.state.id;
@@ -83,7 +84,7 @@ console.log(id);
               <br />
             </CardContent>
             <CardActions>
-              <Button size="small" href={`/user`}>
+              <Button size="small" onClick={()=>{navigate("/user")}}>
                 Back
               </Button>
             </CardActions>
